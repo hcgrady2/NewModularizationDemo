@@ -1,5 +1,6 @@
 package debug;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.guiying.module.common.base.BaseApplication;
 import com.guiying.module.common.http.HttpClient;
 import com.guiying.module.common.http.OnResultListener;
@@ -17,6 +18,7 @@ public class MainApplication extends BaseApplication {
     @Override
     public void onCreate() {
         super.onCreate();
+        ARouter.init(this);
         login();
     }
 
